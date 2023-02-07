@@ -17,3 +17,31 @@ int main(){
 	
 	return 0;
 }
+
+void shuffle(int &a,int &b,int &c,int &d){
+	for(int i = 0;i < 10;i++){
+		int temp;
+		switch (rand()%4+1){
+		case 1:
+			temp = a;
+			a = b;
+			b = temp;
+			break;
+		case 2:
+			temp = b;
+			b = c;
+			c = temp;
+			break;
+		case 3:
+			temp = c;
+			c = d;
+			d = temp;
+			break;
+	case 4:
+			temp = d;
+			d = a;
+			a = temp;
+			break;
+	}
+	}
+}
